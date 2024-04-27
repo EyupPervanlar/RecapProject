@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entites.Concrete
+namespace Entites.Abstract
 {
-    public class Color
+    public interface IEntity
     {
-        public int Id { get; set; }
-        public string ColorName { get; set; }
     }
 }

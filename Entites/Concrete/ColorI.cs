@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Entites.Concrete
 {
-    public class Brand:IEntity
+    public class ColorI:IEntity
     {
-        [Key] public int BrandId { get; set; }
-        public string  BrandName { get; set; }
-
+        [Key]
+        public int ColorId { get; set; }
+        public string ColorName { get; set; }
     }
 }
