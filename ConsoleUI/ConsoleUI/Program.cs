@@ -17,15 +17,26 @@ using DataAccess.Abstract;
 //    Description = "Arabaa",
 //};
 
+Customer customer1 = new Customer
+{
+    CompanyName = "Ns"
+};
+CustomerTest();
 CarTest();
 //ColorTest();
 //BrandTest();
 Console.ReadLine();
 
+ void CustomerTest()
+{
+    CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+    customerManager.add(customer1);
+}
 static void CarTest()
 {
     CarManager carManager = new CarManager(new EfCarDal());
-    foreach (var car in carManager.getCarDetails())//getAll
+    var result = carManager.getCarDetails();
+    foreach (var car in result.Data )//getAll
     {
         Console.WriteLine("CarName: " + car.CarName+ " CarName: " + car.BrandName+" ColorName: "+car.ColorName+ " DailyPrice: "+car.DailyPrice);
     }
