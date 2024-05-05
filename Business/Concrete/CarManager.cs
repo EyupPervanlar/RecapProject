@@ -35,6 +35,12 @@ namespace Business.Concrete
 
         }
 
+        public IResult Delete(Car car)
+        {
+           _carDal.Delete(car);
+            return new SuccesResult(Messages.CarDeleted);
+        }
+
         public IDataResult<List<Car>> getAll()
         {
             if (DateTime.Now.Hour == 17)
@@ -65,5 +71,10 @@ namespace Business.Concrete
             return new SuccesDataResult<List<Car>>( _carDal.GetAll(c => c.CarId == id));
         }
 
+        public IResult Update(Car car)
+        {
+            _carDal.Update(car);
+            return new SuccesResult(Messages.CarUpdated);
+        }
     }
 }

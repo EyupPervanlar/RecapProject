@@ -35,5 +35,10 @@ namespace Business.Constans
         internal static string ColorDeleted="Color is Deleted";
         internal static string ColorUpdated="Color is Updated";
         internal static string colorListed="Colors are Listed";
+        internal static string PasswordInvalid;
+        internal static string UserAdded;
+        internal static string UserListed;
+        internal static string CarDeleted;
+        internal static string CarUpdated;
     }
 }

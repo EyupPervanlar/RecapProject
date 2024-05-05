@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfRentalsDal:EfEntityRepositoryBase<Rentals,RentACarContext>,IRentalsDal
+    public class EfRentalsDal : EfEntityRepositoryBase<Rentals, RentACarContext>, IRentalsDal
     {
+        public Rentals GetRentedCar(int carId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
