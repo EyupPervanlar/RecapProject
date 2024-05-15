@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constans;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac;
 using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entites.Concrete;
@@ -19,7 +21,7 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             if (car.CarName.Length > 2 && car.DailyPrice > 0)
@@ -34,7 +36,7 @@ namespace Business.Concrete
             }
 
         }
-
+        
         public IResult Delete(Car car)
         {
            _carDal.Delete(car);

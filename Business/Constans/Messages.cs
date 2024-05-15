@@ -40,5 +40,6 @@ namespace Business.Constans
         internal static string UserListed;
         internal static string CarDeleted;
         internal static string CarUpdated;
+        internal static string CarImagesAdded;
     }
 }
